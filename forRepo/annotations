@@ -1,3 +1,7 @@
 hadoop fs -ls  /data/
 hadoop fs -copyFromLocal products.csv /data/
 hadoop fs -mkdir /data
+
+bin/beeline -u jdbc:hive2://
+
+emporary tables hides permanent table
