@@ -1,0 +1,3 @@
+hadoop fs -ls  /data/
+hadoop fs -copyFromLocal products.csv /data/
+hadoop fs -mkdir /data
