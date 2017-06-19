@@ -4,4 +4,18 @@ hadoop fs -mkdir /data
 
 bin/beeline -u jdbc:hive2://
 
-emporary tables hides permanent table
+load data local inpath '/home/kiquetal/data/fresh_products.csv';
+into table freshproducts;
+
+  WILL COPY THE LAST FILE into the warehouse
+ hadoop fs -ls /user/hive/warehouse/plural.db/freshproducts
+
+load data inpath '/data/freshproducts.csv' meaning HDF and this means the FILES HAS BEEN Moved into the warehouse directory!!!!
+hadoop fs -ls /user/hive/warehouse/plural.db/freshproducts
+
+
+
+
+insert into products
+select id,title,cost from freshproducts;
+temporary tables hides permanent table
